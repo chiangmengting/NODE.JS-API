@@ -4,7 +4,7 @@ const bodyParser = require('body-Parser'); //將body-parser設成頂層middlewar
 const cors = require('cors'); //CORS(解決跨網域問題)
 const bluebird = require('bluebird'); //青鳥
 const _ = require("lodash"); //loadsh,處理數據的各種方法
-const test = require('./test'); //如何和自己的api連接的測試
+// const test = require('./api/test'); //如何和自己的api連接的測試
 
 const mysql = require('mysql');
 // 設定資料庫連線
@@ -50,9 +50,9 @@ app.get('/', function (req, res) {
 })
 
 //如何和自己的api連接的測試
-app.get('/test', function (req, res) {
-    res.json(test)
-})
+// app.get('/test', function (req, res) {
+//     res.json(test)
+// })
 
 // 自定義錯誤頁面
 app.use((req, res) => {
